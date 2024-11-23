@@ -57,13 +57,13 @@ function setup() {
     // Criar os sprites apenas uma vez
 
 
-    mlf= createSprite ( width *3.2 , height /2 + 50 );
+    mlf= createSprite ( width *3.8 , height /2 + 50 );
     mlf.addImage (mlF);
     mlf.scale = 0.4;
     mlf.visible = false
 
 
-    atf = createSprite ( width *3.2 , height /2 + 50 );
+    atf = createSprite ( width *3.8 , height /2 + 50 );
     atf.addImage (atF);
     atf.scale = 0.7;
     atf.visible = false
@@ -89,7 +89,7 @@ function setup() {
     aTenta.scale = 0.4;
 
 
-    nef = createSprite ( width *3.2 , height /2 );
+    nef = createSprite ( width *3.8 , height /2 );
     nef.addImage (neF);
     nef.scale = 0.4;
     nef.visible = false
@@ -247,6 +247,7 @@ function NEfase() {
     interiorJogo.scale = 1
     vv.visible = true; // Mostrar o sprite vv
     vv.changeAnimation ("av")
+    xao.y = height / 1.07
 
 
 
@@ -316,7 +317,7 @@ function NEfase() {
     fill("white");
     textFont(fonte);
     textSize(15);
-    text("A Noite Estrelada é uma das obras mais famosas do pintor holandês Vincent van Gogh,\n criada em 1889 enquanto ele estava em um hospital psiquiátrico em Saint-Rémy-de-Provence, na França.\n A pintura retrata uma paisagem noturna, com um céu repleto de estrelas brilhantes e um redemoinho de cores vibrantes.\n Van Gogh utilizou pinceladas expressivas e intensas, uma técnica característica de seu estilo pós-impressionista, para transmitir emoção e movimento.\n O contraste entre o céu turbulento e a calma do vilarejo reflete a luta interna do artista.\n A obra explora temas como solidão, angústia e a beleza da natureza.\n A Noite Estrelada é um exemplo do talento de Van Gogh em capturar a essência emocional do mundo ao seu redor.\n A pintura continua a inspirar gerações de artistas e admiradores, sendo uma das mais reconhecidas da história da arte.", width *3.2 , height /6
+    text("A Noite Estrelada é uma das obras mais famosas do pintor holandês Vincent van Gogh,\n criada em 1889 enquanto ele estava em um hospital psiquiátrico em Saint-Rémy-de-Provence, na França.\n A pintura retrata uma paisagem noturna, com um céu repleto de estrelas brilhantes e um redemoinho de cores vibrantes.\n Van Gogh utilizou pinceladas expressivas e intensas, uma técnica característica de seu estilo pós-impressionista, para transmitir emoção e movimento.\n O contraste entre o céu turbulento e a calma do vilarejo reflete a luta interna do artista.\n A obra explora temas como solidão, angústia e a beleza da natureza.\n A Noite Estrelada é um exemplo do talento de Van Gogh em capturar a essência emocional do mundo ao seu redor.\n A pintura continua a inspirar gerações de artistas e admiradores, sendo uma das mais reconhecidas da história da arte.", width *3.85 , height /8.5
 )
 
 
@@ -345,7 +346,7 @@ function MLfase() {
     interiorJogo.scale = 1
     vv.changeAnimation ("dva")
     vv.visible = true; // Mostrar o sprite vv
-    xao.y = height/1.1;
+    xao.y = height/1.05;
 
 
     if (keyIsDown(65)) {
@@ -407,7 +408,7 @@ function MLfase() {
     textFont(fonte);
     textSize(15);
     text("A Mona Lisa é uma das pinturas mais famosas do artista renascentista Leonardo da Vinci,\n criada entre 1503 e 1506, embora tenha continuado a ser trabalhada por ele até cerca de 1517.\n A obra retrata uma mulher com um sorriso enigmático, cuja identidade permanece um mistério até hoje.\n Da Vinci usou a técnica do sfumato, criando transições suaves entre as cores e sombras, o que dá um efeito de profundidade realista.\n A composição e a postura da figura refletem a perfeição da anatomia humana, um dos interesses de Da Vinci.\n A pintura é famosa também pela sua aura de mistério, que envolve tanto o sorriso quanto o fundo paisagístico.\n A Mona Lisa está atualmente no Museu do Louvre, em Paris, e é um ícone cultural global.\n A obra é um exemplo notável da maestria técnica e da busca pelo realismo na Renascença.",
-    width *3.2 , height /6
+    width *3.85 , height /8.5
     )
     if (vv.isTouching (nef)) {
 
@@ -434,7 +435,7 @@ function ATfase() {
     interiorJogo.scale = 1
     vv.changeAnimation ("sda")
     vv.visible = true; // Mostrar o sprite vv
-    xao.y = height/1.1;
+    xao.y = height/1.03;
 
 
     if (keyIsDown(65)) {
@@ -497,17 +498,15 @@ function ATfase() {
     textFont(fonte);
     textSize(15);
     text("O quadro São João da Cruz, pintado por Salvador Dalí em 1951, é uma obra surrealista que reflete a busca espiritual e o sofrimento humano.\n A pintura retrata São João da Cruz, um místico espanhol, em uma posição contemplativa, suspenso no espaço, como se estivesse em um transe espiritual.\n Dalí utiliza uma técnica detalhista para criar um contraste entre o misticismo e a realidade, um tema comum em sua obra.\n O fundo de paisagem desértica e as figuras alongadas são elementos típicos do estilo surrealista, que busca representar o subconsciente e a imaginação.\n A obra é também uma reflexão sobre a solidão e a meditação espiritual, mostrando a conexão entre a religião e a arte.\n Dalí, conhecido por suas imagens oníricas e distorcidas, aborda temas profundos de forma única, unindo o divino ao terreno.\n São João da Cruz é um exemplo de como o surrealismo pode explorar conceitos filosóficos e religiosos com uma linguagem visual inovadora.",
-    width *3.2 , height /6
+    width *3.85 , height /8.5
     )
     if (vv.isTouching (atf)) {
 
 
-        vv.velocityX = 0
+        vv.velocityX = 0
 
 
-    }
+    }
 
 
 }
-
-
